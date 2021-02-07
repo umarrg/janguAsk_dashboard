@@ -87,8 +87,7 @@
               <div>
                 <v-sparkline
                   :fill="fill"
-                  color="#f69227"
-                  height="215"
+                  height="200"
                   :gradient="gradient"
                   :line-width="width"
                   :padding="padding"
@@ -143,12 +142,11 @@
                 </div>
               </v-row>
               <div>
-                 <GChart
-                type="ColumnChart"
-                color="#f69227"
-                :data="columnChartData"
-                :options="chartOptions"
-              />
+                <GChart
+                  type="ColumnChart"
+                  :data="chartData"
+                  :options="chartOptions"
+                />
               </div>
             </v-card-text>
           </v-card>
@@ -245,7 +243,7 @@
 
 <script>
 const gradients = [
-  ["#f69227"],
+  ["#222"],
   ["#42b3f4"],
   ["red", "orange", "yellow"],
   ["purple", "violet"],
@@ -261,7 +259,7 @@ export default {
       fill: true,
       selectedGradient: gradients[4],
       gradients,
-      padding: 0,
+      padding: 8,
       radius: 10,
       value: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0],
       width: 2,
@@ -273,16 +271,6 @@ export default {
         ["2016", 660, 1120, 300],
         ["2017", 1030, 540, 350],
       ],
-       columnChartData: [
-      ['Days', 'Times'],
-      ['Monday', 45],
-      ['Tuesday', 60],
-      ['Wednesday', 30],
-      ['Thursday', 30],
-      ['Friday', 55],
-      ['Saturday', 0],
-      ['Sunday', 0],
-    ],
       chartOptions: {
         chart: {
           title: "Company Performance",

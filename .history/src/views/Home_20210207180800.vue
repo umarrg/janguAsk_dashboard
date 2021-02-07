@@ -145,7 +145,6 @@
               <div>
                  <GChart
                 type="ColumnChart"
-                color="#f69227"
                 :data="columnChartData"
                 :options="chartOptions"
               />

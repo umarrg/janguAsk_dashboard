@@ -145,7 +145,16 @@
               <div>
                  <GChart
                 type="ColumnChart"
-                color="#f69227"
+                color=" columnChartData: [
+      ['Days', 'Times'],
+      ['Monday', 45],
+      ['Tuesday', 60],
+      ['Wednesday', 30],
+      ['Thursday', 30],
+      ['Friday', 55],
+      ['Saturday', 0],
+      ['Sunday', 0],
+    ],"
                 :data="columnChartData"
                 :options="chartOptions"
               />

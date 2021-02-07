@@ -143,12 +143,11 @@
                 </div>
               </v-row>
               <div>
-                 <GChart
-                type="ColumnChart"
-                color="#f69227"
-                :data="columnChartData"
-                :options="chartOptions"
-              />
+                <GChart
+                  type="ColumnChart"
+                  :data="chartData"
+                  :options="chartOptions"
+                />
               </div>
             </v-card-text>
           </v-card>
@@ -245,12 +244,12 @@
 
 <script>
 const gradients = [
-  ["#f69227"],
-  ["#42b3f4"],
-  ["red", "orange", "yellow"],
-  ["purple", "violet"],
-  ["#00c6ff", "#F0F", "#FF0"],
-  ["#f72047", "#ffd200", "#1feaea"],
+  // ["#f69227"],
+  // // ["#42b3f4"],
+  // // ["red", "orange", "yellow"],
+  // // ["purple", "violet"],
+  // // ["#00c6ff", "#F0F", "#FF0"],
+  // // ["#f72047", "#ffd200", "#1feaea"],
 ];
 
 export default {
@@ -273,16 +272,6 @@ export default {
         ["2016", 660, 1120, 300],
         ["2017", 1030, 540, 350],
       ],
-       columnChartData: [
-      ['Days', 'Times'],
-      ['Monday', 45],
-      ['Tuesday', 60],
-      ['Wednesday', 30],
-      ['Thursday', 30],
-      ['Friday', 55],
-      ['Saturday', 0],
-      ['Sunday', 0],
-    ],
       chartOptions: {
         chart: {
           title: "Company Performance",

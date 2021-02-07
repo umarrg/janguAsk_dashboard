@@ -1,5 +1,6 @@
 <template>
   <v-app class="custom__bg">
+
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
@@ -85,17 +86,33 @@
                 </div>
               </v-row>
               <div>
-                <v-sparkline
-                  :fill="fill"
-                  color="#f69227"
-                  height="215"
-                  :gradient="gradient"
-                  :line-width="width"
-                  :padding="padding"
-                  :smooth="radius || false"
-                  :value="value"
-                  auto-draw
-                ></v-sparkline>
+               
+              </div>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col cols="12" md="4">
+          <v-card>
+            <v-card-text class="pa-7">
+              <v-row>
+                <div>
+                  <p class="mb-0 h2-text card_con">Activities Monitor</p>
+                  <p class="third_header">Calculated Last 30 days</p>
+                </div>
+                <v-spacer></v-spacer>
+                <div>
+                  <span>
+                    <v-icon color="">mdi-refresh</v-icon>
+                    <v-icon>mdi-dots-vertical</v-icon>
+                  </span>
+                </div>
+              </v-row>
+              <div>
+               <GChart
+                    type="LineChart"
+                    :data="chartData"
+                    :options="chartOptions"
+                  />
               </div>
             </v-card-text>
           </v-card>
@@ -118,37 +135,10 @@
               </v-row>
               <div>
                 <GChart
-                  type="LineChart"
+                  type="ColumnChart"
                   :data="chartData"
                   :options="chartOptions"
                 />
-              </div>
-            </v-card-text>
-          </v-card>
-        </v-col>
-        <v-col cols="12" md="4">
-          <v-card>
-            <v-card-text class="pa-7">
-              <v-row>
-                <div>
-                  <p class="mb-0 h2-text card_con">Activities Monitor</p>
-                  <p class="third_header">Calculated Last 30 days</p>
-                </div>
-                <v-spacer></v-spacer>
-                <div>
-                  <span>
-                    <v-icon color="">mdi-refresh</v-icon>
-                    <v-icon>mdi-dots-vertical</v-icon>
-                  </span>
-                </div>
-              </v-row>
-              <div>
-                 <GChart
-                type="ColumnChart"
-                color="#f69227"
-                :data="columnChartData"
-                :options="chartOptions"
-              />
               </div>
             </v-card-text>
           </v-card>
@@ -244,27 +234,11 @@
 </template>
 
 <script>
-const gradients = [
-  ["#f69227"],
-  ["#42b3f4"],
-  ["red", "orange", "yellow"],
-  ["purple", "violet"],
-  ["#00c6ff", "#F0F", "#FF0"],
-  ["#f72047", "#ffd200", "#1feaea"],
-];
-
 export default {
   name: "Home",
   components: {},
   data() {
     return {
-      fill: true,
-      selectedGradient: gradients[4],
-      gradients,
-      padding: 0,
-      radius: 10,
-      value: [0, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0],
-      width: 2,
       drawer: true,
       chartData: [
         ["Year", "Sales", "Expenses", "Profit"],
@@ -273,16 +247,6 @@ export default {
         ["2016", 660, 1120, 300],
         ["2017", 1030, 540, 350],
       ],
-       columnChartData: [
-      ['Days', 'Times'],
-      ['Monday', 45],
-      ['Tuesday', 60],
-      ['Wednesday', 30],
-      ['Thursday', 30],
-      ['Friday', 55],
-      ['Saturday', 0],
-      ['Sunday', 0],
-    ],
       chartOptions: {
         chart: {
           title: "Company Performance",
