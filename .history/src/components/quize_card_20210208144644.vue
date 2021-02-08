@@ -3,16 +3,14 @@
     <template v-slot:activator="{ on, attrs }">
       <v-card class="pa-0" v-bind="attrs" v-on="on">
         <v-list class="pa-0">
-          <v-list-item class="">
+          <v-list-item>
             <v-list-item-icon>
               <v-avatar color="#f7f9fb">
-                <v-icon color="#707070">mdi-image</v-icon>
+                <v-icon color="#707070">mdi-video-plus</v-icon>
               </v-avatar>
             </v-list-item-icon>
             <v-list-item-content>
-              <p class="mt-5 custom__text">
-                Post a promotional Ads/banners here
-              </p>
+              <p class="custom__text mt-5">Post a Quiz here</p>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -22,15 +20,9 @@
       <v-card-text>
         <v-card-title class="pt-8">
           <v-row>
-            <h6 class="headline">Post a Ads</h6>
+            <h6 class="headline">Post a Quiz here</h6>
             <v-spacer></v-spacer>
-            <v-btn
-              color="#e39200"
-              
-              class=""
-            icon
-              @click="dialog = false"
-            >
+            <v-btn color="#e39200" class="" icon @click="dialog = false">
               <v-icon color="black">mdi-close</v-icon>
             </v-btn>
           </v-row>
@@ -41,21 +33,16 @@
           <v-row>
             <v-col cols="12" md="12" class="px-2 py-0">
               <div>
-                <span>Type</span>
-                <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
-                  label="Select Type of Post"
-                  outlined
-                  required
-                ></v-select>
+                <span>Subject</span>
+                <v-text-field outlined> </v-text-field>
               </div>
             </v-col>
             <v-col cols="12" md="12" class="px-2 py-0">
               <div>
-                <span>Page</span>
+                <span>Lavel</span>
                 <v-select
-                  :items="['0-17', '18-29', '30-54', '54+']"
-                  label="Select page to show the post"
+                  :items="['Primary level', 'Secondary level', 'Tetiary level']"
+                  label="Select level"
                   outlined
                   required
                 ></v-select>
@@ -64,7 +51,9 @@
             <v-col cols="12" md="12" class="px-2 py-0">
               <div>
                 <span>Title</span>
-                <p>the value will be text ad</p>
+                <p>
+                  The title could be specific course or sub-field of the subject
+                </p>
 
                 <v-text-field outlined label="Enter Title"> </v-text-field>
               </div>

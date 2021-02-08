@@ -24,13 +24,13 @@
           <Adscard />
         </v-col>
         <v-col cols="12" md="4">
-          <Postcard />
+         <Postcard/>
         </v-col>
         <v-col cols="12" md="4">
-          <Quizecard />
+         <Quizecard/>
         </v-col>
-        <v-col cols="12" md="4"> 
-            <Lecturecard />
+        <v-col cols="12" md="4">
+         
         </v-col>
         <v-col cols="12" md="4">
           <v-card>
@@ -109,20 +109,20 @@
                           </v-btn>
                         </template>
 
-                        <v-list class="pa-0">
-                          <v-list-item
-                            v-for="item in menus"
-                            :key="item.title"
-                            class="pa-1"
-                          >
-                            <v-list-item-title class="pa-0">
+                        <v-list class="pa-0" >
+                          <v-list-item v-for="item in menus" :key="item.title" class="pa-1">
+                            <v-list-item-title  class="pa-0"  
+                              >
                               <v-btn small elevation="" color="">
-                                Edit
+                               Edit
                               </v-btn>
-                              <v-btn small elevation="" color="">
-                                Edit
+                               <v-btn small elevation="" color="">
+                               Edit
                               </v-btn>
-                            </v-list-item-title>
+
+
+                              </v-list-item-title
+                            >
                           </v-list-item>
                         </v-list>
                       </v-menu>
@@ -222,17 +222,16 @@
 </template>
 
 <script>
-import Quizecard from "../components/quize_card";
+import Quizecard from '../components/quize_card'
 import Adscard from "../components/Ads_card";
-import Postcard from "../components/post_card";
-import Lecturecard from "../components/lecture_card";
+import Postcard from '../components/post_card';
+import Lecturecard from '../components/lecture_card';
 
 export default {
   components: {
     Adscard,
     Postcard,
     Quizecard,
-    Lecturecard,
   },
   data: () => ({
     menus: [

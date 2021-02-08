@@ -24,13 +24,39 @@
           <Adscard />
         </v-col>
         <v-col cols="12" md="4">
-          <Postcard />
+         
         </v-col>
         <v-col cols="12" md="4">
-          <Quizecard />
+          <v-card>
+            <v-list class="pa-0">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-avatar color="#f7f9fb">
+                    <v-icon color="#707070">mdi-video-plus</v-icon>
+                  </v-avatar>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <p class="custom__text mt-5">Post a Quize here</p>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
         </v-col>
-        <v-col cols="12" md="4"> 
-            <Lecturecard />
+        <v-col cols="12" md="4">
+          <v-card>
+            <v-list class="pa-0">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-avatar color="#f7f9fb">
+                    <v-icon color="#707070">mdi-video-plus</v-icon>
+                  </v-avatar>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <p class="custom__text mt-5">Post a lecture share</p>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
         </v-col>
         <v-col cols="12" md="4">
           <v-card>
@@ -109,20 +135,20 @@
                           </v-btn>
                         </template>
 
-                        <v-list class="pa-0">
-                          <v-list-item
-                            v-for="item in menus"
-                            :key="item.title"
-                            class="pa-1"
-                          >
-                            <v-list-item-title class="pa-0">
+                        <v-list class="pa-0" >
+                          <v-list-item v-for="item in menus" :key="item.title" class="pa-1">
+                            <v-list-item-title  class="pa-0"  
+                              >
                               <v-btn small elevation="" color="">
-                                Edit
+                               Edit
                               </v-btn>
-                              <v-btn small elevation="" color="">
-                                Edit
+                               <v-btn small elevation="" color="">
+                               Edit
                               </v-btn>
-                            </v-list-item-title>
+
+
+                              </v-list-item-title
+                            >
                           </v-list-item>
                         </v-list>
                       </v-menu>
@@ -222,17 +248,11 @@
 </template>
 
 <script>
-import Quizecard from "../components/quize_card";
 import Adscard from "../components/Ads_card";
-import Postcard from "../components/post_card";
-import Lecturecard from "../components/lecture_card";
-
+import Postcard from '../components/post_card';
 export default {
   components: {
     Adscard,
-    Postcard,
-    Quizecard,
-    Lecturecard,
   },
   data: () => ({
     menus: [

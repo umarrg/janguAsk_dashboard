@@ -28,7 +28,7 @@
               color="#e39200"
               
               class=""
-            icon
+             i
               @click="dialog = false"
             >
               <v-icon color="black">mdi-close</v-icon>

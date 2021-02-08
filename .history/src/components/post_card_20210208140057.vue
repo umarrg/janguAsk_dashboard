@@ -1,5 +1,4 @@
-<template>
-  <v-dialog v-model="dialog" persistent max-width="500px">
+ <v-dialog v-model="dialog" persistent max-width="500px">
     <template v-slot:activator="{ on, attrs }">
       <v-card class="pa-0" v-bind="attrs" v-on="on">
         <v-list class="pa-0">
@@ -28,7 +27,7 @@
               color="#e39200"
               
               class=""
-            icon
+             icon
               @click="dialog = false"
             >
               <v-icon color="black">mdi-close</v-icon>
@@ -113,16 +112,3 @@
       </v-card-actions>
     </v-card>
   </v-dialog>
-</template>
-<script>
-export default {
-  data: () => ({
-    dialog: false,
-  }),
-};
-</script>
-<style scoped>
-.custom__size {
-  font-size: 11px;
-}
-</style>

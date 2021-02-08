@@ -30,7 +30,7 @@
           <Quizecard />
         </v-col>
         <v-col cols="12" md="4"> 
-            <Lecturecard />
+            <L
         </v-col>
         <v-col cols="12" md="4">
           <v-card>

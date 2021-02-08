@@ -2,20 +2,20 @@
   <v-dialog v-model="dialog" persistent max-width="500px">
     <template v-slot:activator="{ on, attrs }">
       <v-card class="pa-0" v-bind="attrs" v-on="on">
-        <v-list class="pa-0">
-          <v-list-item class="">
-            <v-list-item-icon>
-              <v-avatar color="#f7f9fb">
-                <v-icon color="#707070">mdi-image</v-icon>
-              </v-avatar>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <p class="mt-5 custom__text">
-                Post a promotional Ads/banners here
-              </p>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+      
+            <v-list class="pa-0">
+              <v-list-item>
+                <v-list-item-icon>
+                  <v-avatar color="#f7f9fb">
+                    <v-icon color="#707070">mdi-video-plus</v-icon>
+                  </v-avatar>
+                </v-list-item-icon>
+                <v-list-item-content>
+                  <p class="custom__text mt-5">Post a Quize here</p>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-card>
       </v-card>
     </template>
     <v-card>

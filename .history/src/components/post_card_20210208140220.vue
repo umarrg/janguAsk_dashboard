@@ -3,16 +3,14 @@
     <template v-slot:activator="{ on, attrs }">
       <v-card class="pa-0" v-bind="attrs" v-on="on">
         <v-list class="pa-0">
-          <v-list-item class="">
+          <v-list-item>
             <v-list-item-icon>
               <v-avatar color="#f7f9fb">
-                <v-icon color="#707070">mdi-image</v-icon>
+                <v-icon color="#707070">mdi-video-plus</v-icon>
               </v-avatar>
             </v-list-item-icon>
             <v-list-item-content>
-              <p class="mt-5 custom__text">
-                Post a promotional Ads/banners here
-              </p>
+              <p class="custom__text mt-5">Post a video here</p>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -24,13 +22,7 @@
           <v-row>
             <h6 class="headline">Post a Ads</h6>
             <v-spacer></v-spacer>
-            <v-btn
-              color="#e39200"
-              
-              class=""
-            icon
-              @click="dialog = false"
-            >
+            <v-btn color="#e39200" class="" icon @click="dialog = false">
               <v-icon color="black">mdi-close</v-icon>
             </v-btn>
           </v-row>
@@ -114,15 +106,3 @@
     </v-card>
   </v-dialog>
 </template>
-<script>
-export default {
-  data: () => ({
-    dialog: false,
-  }),
-};
-</script>
-<style scoped>
-.custom__size {
-  font-size: 11px;
-}
-</style>
